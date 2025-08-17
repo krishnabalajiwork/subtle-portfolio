@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Poppins', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -55,11 +55,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				pastel: {
-					blue: 'hsl(var(--pastel-blue))',
-					purple: 'hsl(var(--pastel-purple))',
-					green: 'hsl(var(--pastel-green))',
-					pink: 'hsl(var(--pastel-pink))'
+				vibrant: {
+					purple: 'hsl(var(--vibrant-purple))',
+					blue: 'hsl(var(--vibrant-blue))',
+					green: 'hsl(var(--vibrant-green))',
+					orange: 'hsl(var(--vibrant-orange))',
+					pink: 'hsl(var(--vibrant-pink))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
