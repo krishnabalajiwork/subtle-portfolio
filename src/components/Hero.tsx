@@ -45,15 +45,13 @@ const Hero = () => {
                  <ExternalLink className="w-4 h-4 mr-2" />
                  View Projects
                </Button>
-               <a 
-                 href="https://drive.google.com/file/d/1example/view?usp=sharing" 
-                 target="_blank"
-                 rel="noopener noreferrer"
+               <button 
                  className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium border border-vibrant-purple text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
+                 onClick={() => alert('CV will be available soon! Please contact me via email or LinkedIn for my resume.')}
                >
                  <Download className="w-4 h-4" />
                  Download CV
-               </a>
+               </button>
              </div>
 
              <div className="flex items-center gap-4 justify-center">

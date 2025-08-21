@@ -139,6 +139,10 @@ const Projects = () => {
                          href={project.githubUrl} 
                          target="_blank" 
                          rel="noopener noreferrer"
+                         onClick={(e) => {
+                           console.log('GitHub link clicked:', project.githubUrl);
+                           // Let the link proceed naturally
+                         }}
                          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
                        >
                          <Github className="w-4 h-4" />
@@ -150,6 +154,10 @@ const Projects = () => {
                          href={project.liveUrl} 
                          target="_blank" 
                          rel="noopener noreferrer"
+                         onClick={(e) => {
+                           console.log('Live demo link clicked:', project.liveUrl);
+                           // Let the link proceed naturally
+                         }}
                          className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-gradient-to-r ${project.gradient} text-white hover:opacity-90 rounded-md transition-opacity`}
                        >
                          <ExternalLink className="w-4 h-4" />
