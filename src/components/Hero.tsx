@@ -45,21 +45,15 @@ const Hero = () => {
                  <ExternalLink className="w-4 h-4 mr-2" />
                  View Projects
                </Button>
-               <Button 
-                 variant="outline" 
-                 size="lg"
-                 className="border-vibrant-purple text-vibrant-purple hover:bg-vibrant-purple hover:text-white"
-                 asChild
+               <a 
+                 href="https://drive.google.com/file/d/1example/view?usp=sharing" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium border border-vibrant-purple text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
                >
-                 <a 
-                   href="https://docs.google.com/document/d/1example/export?format=pdf" 
-                   target="_blank"
-                   rel="noopener noreferrer"
-                 >
-                   <Download className="w-4 h-4 mr-2" />
-                   Download CV
-                 </a>
-               </Button>
+                 <Download className="w-4 h-4" />
+                 Download CV
+               </a>
              </div>
 
              <div className="flex items-center gap-4 justify-center">

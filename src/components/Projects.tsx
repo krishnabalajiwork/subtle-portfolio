@@ -135,29 +135,26 @@ const Projects = () => {
 
                    <div className="flex gap-3 pt-4">
                      {project.githubUrl && (
-                       <Button 
-                         size="sm" 
-                         variant="outline" 
-                         className="flex items-center gap-2 border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white"
-                         asChild
+                       <a 
+                         href={project.githubUrl} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
                        >
-                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                           <Github className="w-4 h-4" />
-                           Code
-                         </a>
-                       </Button>
+                         <Github className="w-4 h-4" />
+                         Code
+                       </a>
                      )}
                      {project.liveUrl && (
-                       <Button 
-                         size="sm" 
-                         className={`flex items-center gap-2 bg-gradient-to-r ${project.gradient} text-white hover:opacity-90`}
-                         asChild
+                       <a 
+                         href={project.liveUrl} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-gradient-to-r ${project.gradient} text-white hover:opacity-90 rounded-md transition-opacity`}
                        >
-                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                           <ExternalLink className="w-4 h-4" />
-                           Live Demo
-                         </a>
-                       </Button>
+                         <ExternalLink className="w-4 h-4" />
+                         Live Demo
+                       </a>
                      )}
                    </div>
                 </CardContent>

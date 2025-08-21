@@ -88,16 +88,16 @@ const Certifications = () => {
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                   <Button 
-                     className={`w-full bg-gradient-to-r ${cert.gradient} text-white hover:opacity-90 transition-opacity`}
-                     asChild
+                   <a 
+                     href={cert.certificateUrl} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-gradient-to-r ${cert.gradient} text-white hover:opacity-90 rounded-md transition-opacity`}
                    >
-                     <a href={cert.certificateUrl} target="_blank" rel="noopener noreferrer">
-                       <Award className="w-4 h-4 mr-2" />
-                       View Certificate
-                       <ExternalLink className="w-4 h-4 ml-2" />
-                     </a>
-                   </Button>
+                     <Award className="w-4 h-4" />
+                     View Certificate
+                     <ExternalLink className="w-4 h-4" />
+                   </a>
                 </CardContent>
               </Card>
             ))}
