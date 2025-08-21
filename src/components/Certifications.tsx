@@ -88,14 +88,16 @@ const Certifications = () => {
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <Button 
-                    className={`w-full bg-gradient-to-r ${cert.gradient} text-white hover:opacity-90 transition-opacity`}
-                    onClick={() => window.open(cert.certificateUrl, '_blank')}
-                  >
-                    <Award className="w-4 h-4 mr-2" />
-                    View Certificate
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </Button>
+                   <Button 
+                     className={`w-full bg-gradient-to-r ${cert.gradient} text-white hover:opacity-90 transition-opacity`}
+                     asChild
+                   >
+                     <a href={cert.certificateUrl} target="_blank" rel="noopener noreferrer">
+                       <Award className="w-4 h-4 mr-2" />
+                       View Certificate
+                       <ExternalLink className="w-4 h-4 ml-2" />
+                     </a>
+                   </Button>
                 </CardContent>
               </Card>
             ))}

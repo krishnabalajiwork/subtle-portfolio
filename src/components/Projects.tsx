@@ -133,29 +133,33 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 pt-4">
-                    {project.githubUrl && (
-                      <Button 
-                        size="sm" 
-                        variant="outline" 
-                        className="flex items-center gap-2 border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white"
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </Button>
-                    )}
-                    {project.liveUrl && (
-                      <Button 
-                        size="sm" 
-                        className={`flex items-center gap-2 bg-gradient-to-r ${project.gradient} text-white hover:opacity-90`}
-                        onClick={() => window.open(project.liveUrl, '_blank')}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </Button>
-                    )}
-                  </div>
+                   <div className="flex gap-3 pt-4">
+                     {project.githubUrl && (
+                       <Button 
+                         size="sm" 
+                         variant="outline" 
+                         className="flex items-center gap-2 border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white"
+                         asChild
+                       >
+                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                           <Github className="w-4 h-4" />
+                           Code
+                         </a>
+                       </Button>
+                     )}
+                     {project.liveUrl && (
+                       <Button 
+                         size="sm" 
+                         className={`flex items-center gap-2 bg-gradient-to-r ${project.gradient} text-white hover:opacity-90`}
+                         asChild
+                       >
+                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                           <ExternalLink className="w-4 h-4" />
+                           Live Demo
+                         </a>
+                       </Button>
+                     )}
+                   </div>
                 </CardContent>
               </Card>
             ))}

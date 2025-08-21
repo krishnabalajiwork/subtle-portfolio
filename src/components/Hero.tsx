@@ -52,8 +52,7 @@ const Hero = () => {
                  asChild
                >
                  <a 
-                   href="/resume.pdf" 
-                   download="Chintha_Krishna_Balaji_Resume.pdf"
+                   href="https://docs.google.com/document/d/1example/export?format=pdf" 
                    target="_blank"
                    rel="noopener noreferrer"
                  >
