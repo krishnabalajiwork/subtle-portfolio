@@ -35,15 +35,15 @@ const GlassEffect = () => {
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
-        left: mousePosition.x - 75,
-        top: mousePosition.y - 75,
-        width: '150px',
-        height: '150px',
-        background: 'rgba(255, 255, 255, 0.1)',
-        backdropFilter: 'blur(10px)',
+        left: mousePosition.x - 30,
+        top: mousePosition.y - 30,
+        width: '60px',
+        height: '60px',
+        background: 'rgba(255, 255, 255, 0.05)',
+        backdropFilter: 'blur(15px)',
         borderRadius: '50%',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 4px 16px 0 rgba(31, 38, 135, 0.15)',
         transform: 'translate3d(0, 0, 0)',
       }}
     >
