@@ -35,31 +35,36 @@ const GlassEffect = () => {
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
-        left: mousePosition.x - 30,
-        top: mousePosition.y - 30,
-        width: '60px',
-        height: '60px',
-        background: 'rgba(255, 255, 255, 0.05)',
-        backdropFilter: 'blur(15px)',
+        left: mousePosition.x - 35,
+        top: mousePosition.y - 35,
+        width: '70px',
+        height: '70px',
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05))',
+        backdropFilter: 'blur(20px) saturate(180%)',
         borderRadius: '50%',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow: '0 4px 16px 0 rgba(31, 38, 135, 0.15)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        boxShadow: `
+          0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3),
+          0 1px 0 rgba(255, 255, 255, 0.1)
+        `,
         transform: 'translate3d(0, 0, 0)',
       }}
     >
-      {/* Inner glow effect */}
+      {/* Inner highlight */}
       <div
-        className="absolute inset-2 rounded-full"
+        className="absolute inset-1 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%)',
         }}
       />
       
-      {/* Subtle ring effect */}
+      {/* Center dot */}
       <div
-        className="absolute inset-4 rounded-full border border-white/30"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 rounded-full"
         style={{
-          backdropFilter: 'blur(5px)',
+          background: 'rgba(255, 255, 255, 0.6)',
+          boxShadow: '0 0 4px rgba(255, 255, 255, 0.4)',
         }}
       />
     </div>
