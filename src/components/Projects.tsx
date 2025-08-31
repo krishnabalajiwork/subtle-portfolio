@@ -6,64 +6,34 @@ import { ExternalLink, Github, Calendar, MapPin } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AI-based OCR System",
-      type: "Internship Project - Smart Agriculture Lab",
-      company: "GITAM University, Bengaluru",
-      period: "May 2025 – Jun 2025",
-      description: "Developed and integrated an AI-based OCR system into a distributed processing pipeline for weekly agile releases.",
+      title: "FarmAI Knowledge Assistant",
+      type: "Generative AI + Retrieval-Augmented Generation(RAG) Project",
+      company: "Personal Project",
+      period: "Aug 2025 – Sep 2025",
+      description: "Built an AI-powered agricultural assistant using Streamlit, LangChain, FAISS, and Google Gemini for RAG.",
       achievements: [
-        "Optimized NLP algorithms to boost text extraction accuracy by 15%",
-        "Reduced manual data entry effort by 40%",
-        "Leveraged Python, TensorFlow, and CI/CD best practices"
+        "Built an AI-powered agricultural assistant using Streamlit, LangChain, FAISS, and Google Gemini for RAG",
+        "Designed a conversational chat UI with a knowledge base on crop management and disease control",
+        "Enabling accurate and context-aware Q&A for agricultural queries"
       ],
-      tech: ["Python", "TensorFlow", "OCR", "NLP", "CI/CD"],
-      githubUrl: "https://github.com/krishnabalajiwork/East-Model",
+      tech: ["Streamlit", "LangChain", "FAISS", "Google Gemini", "RAG", "AI"],
+      liveUrl: "https://farmai-assistant.streamlit.app/",
       gradient: "from-vibrant-purple to-vibrant-blue"
-    },
-    {
-      title: "Predictive AI Backend for Plant Growth",
-      type: "Internship Project - Smart Agriculture Lab", 
-      company: "GITAM University, Bengaluru",
-      period: "Jan 2025 – Mar 2025",
-      description: "Developed a predictive AI backend in Python to forecast plant growth using historical and real-time sensor data.",
-      achievements: [
-        "Designed and deployed interactive, real-time dashboards using Streamlit",
-        "Improved model accuracy to 85% through hyperparameter tuning",
-        "Enabled continuous monitoring by stakeholders"
-      ],
-      tech: ["Python", "Streamlit", "Predictive Modeling", "Data Analytics"],
-      liveUrl: "https://test-ai-hydroponics.streamlit.app/",
-      gradient: "from-vibrant-blue to-vibrant-green"
     },
     {
       title: "YouTube Comment Sentiment Analysis",
       type: "Machine Learning Project",
       company: "Personal Project",
-      period: "Sep 2024 – Oct 2024",
-      description: "End-to-end sentiment analysis pipeline to classify over 3,000 comments, providing insights into public opinion with 80% accuracy.",
+      period: "Sep 2024 – Oct 2024", 
+      description: "Built a scalable sentiment classification service for 3,000+ comments using Logistic Regression and VADER.",
       achievements: [
-        "Enhanced model performance with robust text preprocessing workflow",
-        "Compared multiple NLP models like Logistic Regression and VADER",
-        "Built comprehensive data pipeline for sentiment classification"
+        "Built a scalable sentiment classification service for 3,000+ comments using Logistic Regression and VADER",
+        "Achieved 80 percent accuracy with algorithmic optimizations for NLP processing",
+        "Implemented robust text preprocessing workflow for better model performance"
       ],
-      tech: ["Python", "NLP", "Machine Learning", "VADER", "Data Processing"],
+      tech: ["Python", "Logistic Regression", "VADER", "NLP", "Machine Learning"],
       liveUrl: "https://test-sentiment-analysis-bts.streamlit.app/",
-      gradient: "from-vibrant-green to-vibrant-orange"
-    },
-    {
-      title: "Interactive Quiz Application",
-      type: "Web Development Project",
-      company: "Personal Project", 
-      period: "Aug 2024 – Oct 2024",
-      description: "Fully responsive and interactive quiz application using React, implementing component-based architecture and state management.",
-      achievements: [
-        "Implemented component-based architecture for seamless user experience",
-        "Integrated real-time, client-side validation with JavaScript",
-        "Ensured high performance and accessibility with modern HTML/CSS"
-      ],
-      tech: ["React", "JavaScript", "HTML", "CSS", "Responsive Design"],
-      liveUrl: "https://d9n6tm.csb.app/",
-      gradient: "from-vibrant-orange to-vibrant-pink"
+      gradient: "from-vibrant-blue to-vibrant-green"
     }
   ];
 
@@ -134,21 +104,6 @@ const Projects = () => {
                   </div>
 
                    <div className="flex gap-3 pt-4">
-                     {project.githubUrl && (
-                       <a 
-                         href={project.githubUrl} 
-                         target="_blank" 
-                         rel="noopener noreferrer"
-                         onClick={(e) => {
-                           console.log('GitHub link clicked:', project.githubUrl);
-                           // Let the link proceed naturally
-                         }}
-                         className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-vibrant-purple/30 text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
-                       >
-                         <Github className="w-4 h-4" />
-                         Code
-                       </a>
-                     )}
                      {project.liveUrl && (
                        <a 
                          href={project.liveUrl} 

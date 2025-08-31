@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Download, Github, Linkedin } from "lucide-react";
+import { ExternalLink, Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -36,23 +36,16 @@ const Hero = () => {
               </div>
             </div>
             
-             <div className="flex flex-wrap gap-4 justify-center">
-               <Button 
-                 onClick={() => scrollToSection('projects')} 
-                 size="lg"
-                 className="bg-gradient-to-r from-vibrant-purple to-vibrant-blue hover:opacity-90 transition-opacity text-white"
-               >
-                 <ExternalLink className="w-4 h-4 mr-2" />
-                 View Projects
-               </Button>
-               <button 
-                 className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium border border-vibrant-purple text-vibrant-purple hover:bg-vibrant-purple hover:text-white rounded-md transition-colors"
-                 onClick={() => alert('CV will be available soon! Please contact me via email or LinkedIn for my resume.')}
-               >
-                 <Download className="w-4 h-4" />
-                 Download CV
-               </button>
-             </div>
+             <div className="flex justify-center">
+                <Button 
+                  onClick={() => scrollToSection('projects')} 
+                  size="lg"
+                  className="bg-gradient-to-r from-vibrant-purple to-vibrant-blue hover:opacity-90 transition-opacity text-white"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Projects
+                </Button>
+              </div>
 
              <div className="flex items-center gap-4 justify-center">
                <a 

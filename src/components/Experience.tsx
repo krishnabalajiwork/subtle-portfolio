@@ -4,27 +4,30 @@ import { Badge } from "@/components/ui/badge";
 const Experience = () => {
   const experiences = [
     {
-      title: "Intern - Smart Agriculture Lab",
-      company: "GITA University, Bhubaneswar",
-      period: "May 2025 - Jan 2025",
-      type: "Machine Learning Internship",
+      title: "Intern – Smart Agriculture Lab",
+      company: "GITAM University, Bengaluru",
+      period: "May 2025 – Jun 2025",
+      type: "AI/OCR Systems Development",
       achievements: [
-        "Developed and deployed computer vision systems into a distributed processing pipeline for weekly plant diseases, optimizing NLP algorithms to boost text extraction accuracy by 1%",
-        "Leveraged various ML models like Naïve Bayes, Decision Tree, and CI CD best practices, productivity with 30% models"
+        "Integrated AI-based OCR systems into a distributed processing pipeline for weekly agile releases",
+        "Improved text extraction accuracy by 15 percent and reduced manual effort by 40 percent through algorithm optimization",
+        "Used Python, TensorFlow, Git, and continuous integration to deliver reliable features"
       ],
-      color: "pastel-blue"
+      color: "pastel-blue",
+      liveUrl: "https://test-ocr-east.streamlit.app/"
     },
     {
-      title: "Intern - Smart Agriculture Lab", 
-      company: "GITA University, Bhubaneswar",
-      period: "Jan 2025 - May 2025",
-      type: "Predictive Analytics Internship",
+      title: "Intern – Smart Agriculture Lab", 
+      company: "GITAM University, Bengaluru",
+      period: "Jan 2025 – Mar 2025",
+      type: "Plant Growth Prediction",
       achievements: [
-        "Developed a predictive AI backend in Python to forecast plant growth using historical and real-time sensor data",
-        "Designed and deployed interactive, real-time data dashboards by applying statistical learning theory, improving by stakeholders",
-        "Improved model accuracy to 5%"
+        "Built backend plant-growth prediction system in Python",
+        "Deployed real-time dashboards using Streamlit as frontend which gives for 24x7 access",
+        "Raised AI accuracy to 85 percent using optimized algorithms"
       ],
-      color: "pastel-purple"
+      color: "pastel-purple",
+      liveUrl: "https://test-ai-hydroponics.streamlit.app/"
     }
   ];
 
@@ -64,8 +67,20 @@ const Experience = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="md:text-right">
+                    <div className="md:text-right space-y-2">
                       <Badge variant="outline">{exp.period}</Badge>
+                      {exp.liveUrl && (
+                        <div>
+                          <a 
+                            href={exp.liveUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:underline"
+                          >
+                            Live Demo →
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardContent>
